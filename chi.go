@@ -1,4 +1,4 @@
-package coroutine
+package chi
 
 import (
 	"log"

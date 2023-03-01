@@ -1,4 +1,4 @@
-package coroutine
+package chi
 
 import (
 	"log"
@@ -34,7 +34,6 @@ func TestFuncPanic(t *testing.T) {
 		log.Fatal(err)
 	}
 	logger := log.New(file, "===Error===", log.Ldate|log.Ltime|log.Lshortfile)
-	logger.Printf("123")
 	pool := NewPool(1, logger, simplePanicFunc)
 	for i := 0; i < 2; i++ {
 		pool.Process(1, 2, 3)
